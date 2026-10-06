@@ -21,7 +21,7 @@ A lightweight Roblox UI API for creating script hubs, testing tools, and custom 
 Load DracoAPI:
 
 ```lua
-local DracoAPI = loadstring(game:HttpGet("YOUR_RAW_GITHUB_URL"))()
+local DracoAPI = loadstring(game:HttpGet("https://raw.githubusercontent.com/BlueFenster/DracoAPI/refs/heads/main/DracoAPI.main"))()
 ```
 
 Create a window:
