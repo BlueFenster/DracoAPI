@@ -33,26 +33,41 @@ Load DracoAPI:
 local DracoAPI = loadstring(game:HttpGet(
     "https://raw.githubusercontent.com/BlueFenster/DracoAPI/refs/heads/main/DracoAPI.main"
 ))()
+```
 
 Create a DracoAPI instance:
+
+```lua
 local Draco = DracoAPI.new()
+```
 
 Create a window:
+
+```lua
 local Window = Draco:CreateWindow({
     Name = "Draco Hub"
 })
+```
 
 Create a tab:
+
+```lua
 local Main = Window:CreateTab({
     Name = "Main"
 })
+```
 
 Create a section:
+
+```lua
 local Section = Main:CreateSection({
     Name = "Main Controls"
 })
+```
 
 Create a button:
+
+```lua
 Section:CreateButton({
     Name = "Test Button",
 
@@ -60,8 +75,11 @@ Section:CreateButton({
         print("Button clicked!")
     end
 })
+```
 
 Create a toggle:
+
+```lua
 Section:CreateToggle({
     Name = "Test Toggle",
     Default = false,
@@ -70,8 +88,11 @@ Section:CreateToggle({
         print("Toggle:", Value)
     end
 })
+```
 
 Create a slider:
+
+```lua
 Section:CreateSlider({
     Name = "Power",
     Min = 0,
@@ -82,8 +103,11 @@ Section:CreateSlider({
         print("Power:", Value)
     end
 })
+```
 
 Create an input:
+
+```lua
 Section:CreateInput({
     Placeholder = "Enter something...",
 
@@ -91,8 +115,11 @@ Section:CreateInput({
         print("Input:", Text)
     end
 })
+```
 
-Full Example
+## Full Example
+
+```lua
 local DracoAPI = loadstring(game:HttpGet(
     "https://raw.githubusercontent.com/BlueFenster/DracoAPI/refs/heads/main/DracoAPI.main"
 ))()
@@ -146,32 +173,53 @@ Section:CreateInput({
         print("Entered:", Text)
     end
 })
+```
 
-API
-DracoAPI.new()
+## API
+
+### `DracoAPI.new()`
+
 Creates a new DracoAPI instance.
-local Draco = DracoAPI.new()
 
-Draco:CreateWindow()
+```lua
+local Draco = DracoAPI.new()
+```
+
+### `Draco:CreateWindow()`
+
 Creates the main DracoAPI window.
+
+```lua
 local Window = Draco:CreateWindow({
     Name = "My Window"
 })
+```
 
-Window:CreateTab()
+### `Window:CreateTab()`
+
 Creates a new tab inside the window.
+
+```lua
 local Tab = Window:CreateTab({
     Name = "Main"
 })
+```
 
-Tab:CreateSection()
+### `Tab:CreateSection()`
+
 Creates a section inside a tab.
+
+```lua
 local Section = Tab:CreateSection({
     Name = "Controls"
 })
+```
 
-Section:CreateButton()
+### `Section:CreateButton()`
+
 Creates a clickable button.
+
+```lua
 Section:CreateButton({
     Name = "Test",
 
@@ -179,9 +227,13 @@ Section:CreateButton({
         print("Clicked")
     end
 })
+```
 
-Section:CreateToggle()
+### `Section:CreateToggle()`
+
 Creates an on/off toggle.
+
+```lua
 Section:CreateToggle({
     Name = "Enabled",
     Default = false,
@@ -190,9 +242,13 @@ Section:CreateToggle({
         print(Value)
     end
 })
+```
 
-Section:CreateSlider()
+### `Section:CreateSlider()`
+
 Creates a slider.
+
+```lua
 Section:CreateSlider({
     Name = "Power",
     Min = 0,
@@ -203,9 +259,13 @@ Section:CreateSlider({
         print(Value)
     end
 })
+```
 
-Section:CreateInput()
+### `Section:CreateInput()`
+
 Creates a text input.
+
+```lua
 Section:CreateInput({
     Placeholder = "Enter text...",
 
@@ -213,10 +273,15 @@ Section:CreateInput({
         print(Text)
     end
 })
+```
 
-Element Controls
+## Element Controls
+
 Some elements return an object that can be controlled after creation.
-Toggle
+
+### Toggle
+
+```lua
 local Toggle = Section:CreateToggle({
     Name = "Example",
     Default = false
@@ -225,8 +290,11 @@ local Toggle = Section:CreateToggle({
 Toggle:Set(true)
 
 print(Toggle:Get())
+```
 
-Slider
+### Slider
+
+```lua
 local Slider = Section:CreateSlider({
     Name = "Power",
     Min = 0,
@@ -237,10 +305,14 @@ local Slider = Section:CreateSlider({
 Slider:Set(100)
 
 print(Slider:Get())
+```
 
-Development
-DracoAPI is currently in Beta 0.1.
+## Development
+
+DracoAPI is currently in **Beta 0.1**.
+
 The framework has been tested with:
+
 - Multiple windows
 - Multiple tabs
 - Multiple sections
@@ -252,10 +324,15 @@ The framework has been tested with:
 - Element state controls
 - Tab switching
 - UI dragging
+
 Bugs and API changes are expected while development continues.
+
 New elements, customization options, themes, and other features will be added in future releases.
-Roadmap
+
+## Roadmap
+
 Planned features include:
+
 - Dropdowns
 - Keybinds
 - Notifications
@@ -264,6 +341,9 @@ Planned features include:
 - Improved mobile support
 - Better documentation
 - Additional configuration options
-License
+
+## License
+
 Free to use and modify.
+
 DracoAPI is currently under development and is planned to become open source once the majority of its features are complete.
