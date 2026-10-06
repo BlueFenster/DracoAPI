@@ -3,6 +3,7 @@
 A lightweight Roblox UI API for creating script hubs, testing tools, and custom interfaces.
 
 > ⚠️ DracoAPI is currently in development.
+>     Please do not deobfuscate the code as it will be open sourced once most features are added.
 
 ## Features
 
