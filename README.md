@@ -1,125 +1,35 @@
 # DracoAPI
 
-A lightweight Roblox UI API for creating script hubs, testing tools, and custom interfaces.
+A lightweight Roblox UI API for creating custom interfaces, script hubs, testing tools, and more.
 
-> ⚠️ DracoAPI is currently in development.
->Please do not deobfuscate or redistribute modified versions of the code while DracoAPI is under development. The project is planned to become open source once the majority of its features are complete.
+> ⚠️ **DracoAPI Beta 0.1**
+>
+> DracoAPI is currently in public beta and under active development.
+> Please do not deobfuscate or redistribute modified versions of the code while DracoAPI is under development. The project is planned to become open source once the majority of its features are complete.
+>
+> The API may change as development continues.
 
 ## Features
 
-- Window creation
+- Runtime-generated UI
+- Windows
 - Tabs
+- Sections
 - Buttons
 - Toggles
-- Sections
-- Notifications
-- Customizable UI
-- Designed for easy script-hub creation
+- Sliders
+- Text inputs
+- Callback support
+- Draggable windows
+- Black and red default theme
+- Multiple tabs and sections
+- Designed for easy interface creation
 
 ## Getting Started
 
 Load DracoAPI:
 
 ```lua
-local DracoAPI = loadstring(game:HttpGet("https://raw.githubusercontent.com/BlueFenster/DracoAPI/refs/heads/main/DracoAPI.main"))()
-```
-
-Create a window:
-
-```lua
-local Window = DracoAPI:CreateWindow({
-    Name = "Draco Hub"
-})
-```
-
-Create a tab:
-
-```lua
-local MainTab = Window:CreateTab({
-    Name = "Main"
-})
-```
-
-Create a button:
-
-```lua
-MainTab:CreateButton({
-    Name = "Test Button",
-    Callback = function()
-        print("Button clicked!")
-    end
-})
-```
-
-Create a toggle:
-
-```lua
-MainTab:CreateToggle({
-    Name = "Test Toggle",
-    Default = false,
-
-    Callback = function(Value)
-        print("Toggle:", Value)
-    end
-})
-```
-
-## Example
-
-```lua
-local DracoAPI = loadstring(game:HttpGet("YOUR_RAW_GITHUB_URL"))()
-
-local Window = DracoAPI:CreateWindow({
-    Name = "Draco Hub"
-})
-
-local Main = Window:CreateTab({
-    Name = "Main"
-})
-
-Main:CreateButton({
-    Name = "Test",
-    Callback = function()
-        print("Hello from DracoAPI!")
-    end
-})
-
-Main:CreateToggle({
-    Name = "Example Toggle",
-    Default = false,
-
-    Callback = function(Value)
-        print("Enabled:", Value)
-    end
-})
-```
-
-## API
-
-### `CreateWindow()`
-
-Creates the main DracoAPI window.
-
-### `CreateTab()`
-
-Creates a new tab/page inside the window.
-
-### `CreateButton()`
-
-Creates a clickable button.
-
-### `CreateToggle()`
-
-Creates an on/off toggle.
-
-More functions will be added as DracoAPI develops.
-
-## Development
-
-DracoAPI is currently being developed and tested so there may be bugs.
-
-The API may change while development continues.
-
-## License
-
-Free to use and modify.
+local DracoAPI = loadstring(game:HttpGet(
+    "https://raw.githubusercontent.com/BlueFenster/DracoAPI/refs/heads/main/DracoAPI.main"
+))()
